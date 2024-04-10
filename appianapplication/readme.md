@@ -86,3 +86,5 @@ Click ```Save Changes```
 Sample DA_PackageInformation User Interface:
 <img width="1205" alt="image" src="https://github.com/richardschoen/appiandeploymentapi/assets/9791508/46d5eafc-b4ff-4fa0-8ba6-0d0636a98227">
 
+
+If all works as expected you should now be able to run your user interface example, enter an application ID and see a list of any packages that are defined.
