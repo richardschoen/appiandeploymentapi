@@ -1,5 +1,5 @@
-# Sample Appian Application for access to deployment API
-The steps below describe how to set up the Appian ```Deployment REST API Sample Application```.
+# Sample Appian Application for access to Deployment REST API
+The steps below describe how to set up the Appian ```Deployment REST API Sample Application``` so the REST API can be accessed from the Appian environment
 
 ## Create new application
 Create a new application in Appian titled: ```Deployment REST API Sample Application```
@@ -31,6 +31,10 @@ Paste the SAIL from file: ```DA_GetDeploymentPackages_Expr.sail```
 Click ```Save Changes```
 
 ## Create DA_PackageInformation User Interface
+This user interface can be used to locate and list all packages and the UUID package ids for each package within an application.    
+
+The user will enter an application UUID which can be determined from the Appian Application Properties.   
+
 Create a new user interface and name it: ```DA_PackageInformation```
 
 Switch to expression mode and paste the User Interface SAIL from file: ```DA_PackageInformation_UI.sail```
