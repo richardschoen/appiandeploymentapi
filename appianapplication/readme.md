@@ -9,5 +9,5 @@ Use ```DA``` as the prefix or whatever you desire.
 ## Create DA_PackageInformation User Interface
 Create a new user interface and name it: ```DA_PackageInformation```
 
-Switch to expression mode and paste the User Interface SAIL from file: ```DA_PackageInformation.sail```
+Switch to expression mode and paste the User Interface SAIL from file: ```DA_PackageInformation_UI.sail```
 
