@@ -1,5 +1,5 @@
 # Sample Appian Application for access to deployment API
-The steps below describe how to set up the Appian Deployment REST API sample application
+The steps below describe how to set up the Appian ```Deployment REST API Sample Application```.
 
 ## Create new application
 Create a new application in Appian titled: ```Deployment REST API Sample Application```
