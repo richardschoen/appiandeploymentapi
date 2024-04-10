@@ -34,6 +34,10 @@ Paste the SAIL from file: ```DA_GetDeploymentPackages_Expr.sail```
 
 Click ```Save Changes```
 
+Create expression rule screen shot:   
+![image](https://github.com/richardschoen/appiandeploymentapi/assets/9791508/c97eb0af-d609-4e2d-a5c3-897127423d67)
+
+
 ## Create DA_PackageInformation User Interface
 This user interface can be used to locate and list all packages and the UUID package ids for each package within an application.    
 
@@ -45,4 +49,6 @@ Switch to expression mode and paste the User Interface SAIL from file: ```DA_Pac
 
 Click ```Save Changes```
 
+Sample DA_PackageInformation User Interface
+<img width="1205" alt="image" src="https://github.com/richardschoen/appiandeploymentapi/assets/9791508/46d5eafc-b4ff-4fa0-8ba6-0d0636a98227">
 
