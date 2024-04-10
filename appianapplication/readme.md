@@ -6,7 +6,7 @@ Create a new application in Appian titled: ```Deployment REST API Sample Applica
 
 Use ```DA``` as the prefix or whatever you desire.
 
-## Create Connected System DA Appian Deployment API
+## Create Connected System Named: DA Appian Deployment API
 Create a new connected system to access the Deployment REST API from within Appian named: ```DA Appian Deployment API```   
 
 Description: ```Appian Deployment API Connected System```   
@@ -24,6 +24,40 @@ Click ```Save``` to save the connected system.
 Created connected system user interface example:   
 ![image](https://github.com/richardschoen/appiandeploymentapi/assets/9791508/d63333f6-1b08-4ee3-9044-e688061de9d7)
 
+## Create New Integration Named: DA_GetDeploymentPackages
+Create a new system integration system to access the Deployment REST API  via connected systemn within Appian named: ```DA_DeploymentPackages```   
+
+### Rule Inputs
+appid - This is a single text value to receive the application UUID you want to list packages for. 
+
+### Integration Settings   
+Connection: ```Use a Connected System```
+
+Connected System: ```DA Appian Deployment API```   
+Set to: ```Inherit Base URL```
+
+Base URL: ```Should get set to the Base URL from the Connected System```
+
+Relative Path: ```concat("/suite/deployment-management/v2/applications/",ri!appid,"/packages")```
+
+Method: ```Get```
+
+Timeout (sec): ```10```
+
+Usage: ```Queries data```
+
+Headers - Name: ```Action-Type```  Value: ```export```   
+
+Ignore HTTP headers with empty values: `Checked/Enabled```
+
+Response Body Parsing: ```Convert JSON to Appian value```   
+
+Click ```Test Request``` to test the integration with an appid or ```Save Changes``` to save the integration.
+
+Integration config screen shots:
+![image](https://github.com/richardschoen/appiandeploymentapi/assets/9791508/22fb34df-2038-49a9-9f12-83127f079d7f)
+
+![image](https://github.com/richardschoen/appiandeploymentapi/assets/9791508/6c0ee6b0-794e-438b-8e3e-d3039cae6ea8)
 
 ## Create DA_GetDeployementPackages Expression Rule
 Create a new user expression rule and name it: ```DA_GetDeploymentPackages```
