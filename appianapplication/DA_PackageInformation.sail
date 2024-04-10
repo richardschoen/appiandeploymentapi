@@ -1,5 +1,5 @@
 a!localVariables(
-  /* If no pa kage data, set grid contents to null */
+  /* If no package data, set grid contents to null */
   local!packagelist:if(a!isNullOrEmpty(rule!DA_GetDeploymentPackages(ri!appid)),null,rule!DA_GetDeploymentPackages(ri!appid)),
 {
   a!cardLayout(
