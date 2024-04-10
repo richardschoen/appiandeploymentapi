@@ -19,7 +19,11 @@ Header Name: ```Appian-API-Key```
 
 Value: ```Paste Your API Key```   
 
-CLick ```Save``` to save the connected system.
+Click ```Save``` to save the connected system.
+
+Created connected system user interface example:   
+![image](https://github.com/richardschoen/appiandeploymentapi/assets/9791508/d63333f6-1b08-4ee3-9044-e688061de9d7)
+
 
 ## Create DA_GetDeployementPackages Expression Rule
 Create a new user expression rule and name it: ```DA_GetDeploymentPackages```
