@@ -1,7 +1,7 @@
 # Appian Deployment REST API Scripts
 This folder contains the sample Appian Deployment REST API scripts.
 
-## deployfunction.py - General deployment functions used by scripts
+## deployfunctions.py - General deployment functions used by scripts
 This module contains general deployment functions used by the deployment scripts.
 
 ## appian_packagedetails.py - List Packages for Application
