@@ -9,5 +9,5 @@ https://github.com/richardschoen/appiandeploymentapi/blob/main/Automated-Applica
 This folder contains the configuration information for creating a sample Appian application that can exercise the Deployment REST API to list packages. 
 
 ## scripts folder
-This folder contains the sample scripts I created to exercise and use the Appian REST Deployment API
+This folder contains the sample deployment scripts I created to exercise and use the Appian REST Deployment API
 
