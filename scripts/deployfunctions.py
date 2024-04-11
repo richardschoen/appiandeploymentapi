@@ -19,6 +19,52 @@ from urllib.parse import urlencode
 from importlib.machinery import SourceFileLoader
 import config as cfgdeploy
 
+def format_file_name(filename,appid="",packageid=""):
+    #--------------------------------------------------------------------------
+    # Function: format_file_name
+    # Description: Format file name with template info
+    # If file names have any template info, replace into file names
+    # @@datetime = replace timestamp - yyyymmddhhmmss in file name
+    # @@appid = replace application id in file name
+    # @@packageid = replace package id in file name
+    #
+    # Parms:
+    # string filename  - The file name to format
+    # string appid     - Optional application ID value
+    # string packageid - Optional package ID value
+    # Returns:
+    # String - Returns file name with formatted info
+    #--------------------------------------------------------------------------
+    
+    # Set work field
+    workfile=filename
+    
+    # Set date time work fields based on current time
+    current_datetime = datetime.datetime.now()
+    curdatetime = current_datetime.strftime("%Y%m%d-%H%M%S")
+    curdate = current_datetime.strftime("%Y%m%d")
+    curtime = current_datetime.strftime("%H%M%S")
+
+    # Always check for date time parm    
+    if workfile.find("@@datetime")>=0:
+       workfile=workfile.replace("@@datetime",curdatetime) 
+    if workfile.find("@@DATETIME")>=0:
+       workfile=workfile.replace("@@DATETIME",curdatetime) 
+    # If app ID value passed, check for template
+    if len(appid.strip())>0:
+       if workfile.find("@@appid")>=0:
+          workfile=workfile.replace("@@appid",appid) 
+       if workfile.find("@@APPID")>=0:
+          workfile=workfile.replace("@@APPID",appid) 
+    # If package ID value passed, check for template
+    if len(packageid.strip())>0:
+       if workfile.find("@@packageid")>=0:
+          workfile=workfile.replace("@@packageid",packageid) 
+       if workfile.find("@@PACKAGEID")>=0:
+          workfile=workfile.replace("@@PACKAGEID",packageid) 
+       
+    return workfile
+
 def check_deployment_status(urldeployment,debug):
     #--------------------------------------------------------------------------
     # Function: check_deployment_status
