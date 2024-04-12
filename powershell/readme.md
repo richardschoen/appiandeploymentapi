@@ -6,7 +6,7 @@ The scripts are compatible with PowerShell 7.4.
 ## config.ps1 - Configuration settings file
 This file holds general PowerShell app settings for the deployment app.
 
-## pwsh_packagedetails.ps1 - List Packages for Application
+## pwsh_listpackages.ps1 - List Packages for Application
 This script will take an application uuid as input parameter and will list all the associated packages. 
 
 Parms:
